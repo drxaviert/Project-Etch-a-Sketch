@@ -17,9 +17,6 @@
 }
 
 .block {
-  block-size: 50%;
-  inline-size: 50%;
-
   border: blue 2px dotted;
   background-color: green;
 }
