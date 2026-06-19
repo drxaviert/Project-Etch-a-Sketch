@@ -1,0 +1,7 @@
+#gridContainer {
+  border: 2px black solid;
+}
+
+.block {
+  background-color: red;
+}
