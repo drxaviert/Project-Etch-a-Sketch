@@ -16,7 +16,14 @@
   justify-content: space-between;
 }
 
+#input {
+  display: block;
+  margin-inline: auto;
+  margin-block-end: 20px;
+
+}
+
 .block {
-  border: blue 2px dotted;
+  border: blue 1px dotted;
   background-color: green;
 }
