@@ -10,20 +10,21 @@ input.addEventListener("click", (e) => {
 
 function interaction() {
   const blocks = document.querySelectorAll(".block-base");
-  blocks.forEach((block) =>
+  blocks.forEach((block) => {
+    let opacity = 1;
     block.addEventListener("mouseover", () => {
       let r, g, b;
       r = Math.random() * 255;
       g = Math.random() * 255;
       b = Math.random() * 255;
 
-      let opacity = Math.random();
+      opacity = opacity - 0.1;
 
       let randomColor = `rgb(${r}, ${g}, ${b})`;
-      block.style.backgroundColor = "red";
+      block.style.backgroundColor = randomColor;
       block.style.opacity = opacity;
-    }),
-  );
+    });
+  });
 }
 
 function createGrid() {
