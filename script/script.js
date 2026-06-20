@@ -6,6 +6,9 @@ const gridContainer = document.querySelector("#grid-container");
 function createGrid() {
   let blockSize = `${100 / numBlock}%`;
 
+  const blocks = document.querySelectorAll(".block");
+  blocks.forEach((block) => block.remove());
+
   for (let i = 0; i < numBlock ** 2; i++) {
     const block = document.createElement("div");
     block.classList.add("block");
