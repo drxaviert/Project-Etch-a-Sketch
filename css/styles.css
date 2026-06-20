@@ -23,7 +23,11 @@
 
 }
 
-.block {
+.block-base {
   border: blue 1px dotted;
   background-color: green;
+}
+
+.block-hover {
+  background-color: purple;
 }
