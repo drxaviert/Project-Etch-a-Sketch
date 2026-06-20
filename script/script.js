@@ -3,6 +3,29 @@ let numBlock = 4;
 const input = document.querySelector("#input");
 const gridContainer = document.querySelector("#grid-container");
 
+input.addEventListener("click", (e) => {
+  askNumBlock();
+  createGrid();
+});
+
+function interaction() {
+  const blocks = document.querySelectorAll(".block-base");
+  blocks.forEach((block) =>
+    block.addEventListener("mouseover", () => {
+      let r, g, b;
+      r = Math.random() * 255;
+      g = Math.random() * 255;
+      b = Math.random() * 255;
+
+      let opacity = Math.random();
+
+      let randomColor = `rgb(${r}, ${g}, ${b})`;
+      block.style.backgroundColor = "red";
+      block.style.opacity = opacity;
+    }),
+  );
+}
+
 function createGrid() {
   const blocks = document.querySelectorAll(".block-base");
   blocks.forEach((block) => block.remove());
@@ -18,6 +41,8 @@ function createGrid() {
 
     gridContainer.appendChild(block);
   }
+
+  interaction();
 }
 
 function askNumBlock() {
@@ -28,13 +53,3 @@ function askNumBlock() {
 }
 
 createGrid();
-
-input.addEventListener("click", (e) => {
-  askNumBlock();
-  createGrid();
-});
-
-const blocks = document.querySelectorAll(".block-base");
-blocks.forEach((block) =>
-  block.addEventListener("mouseover", () => block.classList.add("block-hover")),
-);
