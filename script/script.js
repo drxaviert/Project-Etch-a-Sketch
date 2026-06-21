@@ -28,6 +28,11 @@ function interaction() {
   });
 }
 
+function askGridSize() {
+  numBlock = prompt("How big do you want your grid to be?", 4);
+  numBlock = Math.min(numBlock, 5);
+}
+
 function createGrid() {
   resetGrid();
 
@@ -49,8 +54,6 @@ function createGrid() {
 createGrid();
 
 buttonSize.addEventListener("click", () => {
-  numBlock = prompt("How big do you want your grid to be?", 4);
-  numBlock = Math.min(numBlock, 5);
-
+  askGridSize();
   createGrid();
 });
