@@ -14,15 +14,28 @@ body {
 
   margin: auto;
 
-  background-color: red;
+  background-color: black;
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-block-end: 20px;
+}
+
+#button-size {
+  display: block;
+  margin: auto;
+  padding-block: 8px;
+  padding-inline: 5px;
 }
 
 .block-static {
   /* block-size: 25%;
   inline-size: 25%; */
-  background-color: blue;
-  border: pink 1px dotted;
+  background-color: red;
+  border: blue 1px dotted;
+}
+
+.block-hover {
+  background-color: green;
 }
