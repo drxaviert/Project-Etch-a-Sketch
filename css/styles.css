@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding-block-start: 40px;
+}
+
+#grid-container {
+  block-size: 40vw;
+  inline-size: 40vw;
+
+  margin: auto;
+
+  background-color: red;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block-static {
+  /* block-size: 25%;
+  inline-size: 25%; */
+  background-color: blue;
+  border: pink 1px dotted;
+}
